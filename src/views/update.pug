@@ -1,0 +1,23 @@
+html
+    head
+        title Main
+        style.
+            html {
+                font-family: sans-serif;
+            }
+
+            body {
+                padding: 4rem;
+                line-height: 1.5;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+body
+    h1= 'Update ' + id
+    form(action=`http://localhost:3000/accounts/update/${id}` method='post')
+        label(for='name') Enter name:
+        input#name(type='text' name='name' placeholder='Place new name')
+        input(type='submit' value='OK')
+

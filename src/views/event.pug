@@ -1,0 +1,30 @@
+html
+    head
+        title Account
+        style.
+            html {
+                font-family: sans-serif;
+            }
+
+            body {
+                padding: 4rem;
+                line-height: 1.5;
+            }
+            .link {
+                margin-right: 10px;
+            }
+            .link:last-child {
+                margin-right: 0;
+            }
+body
+    a(href='/').link list of accounts
+    a(href=`/accounts/update/${event.accountId}`).link update
+    h1= event.accountId
+    each val, index in event
+        if index === 'transactions'
+            h3= index + ':'
+            each val1 in val
+                each val2, index in val1
+                    p= index + ' ' + val2
+        else
+            p= index + ' ' + val

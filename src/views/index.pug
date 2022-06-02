@@ -1,0 +1,31 @@
+html
+    head
+        title Main
+        style.
+            html {
+                font-family: sans-serif;
+            }
+
+            body {
+                padding: 4rem;
+                line-height: 1.5;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+body
+        h1 Ticknovate test
+        p Hello! Add your two routes to this app to complete the test.
+        p
+            | The boilerplate of the
+            a(href='/accounts/') first one
+            |  has been done for you, but you&apos;ll
+            |     have to complete the implementation, and add the second route for
+            |     changing an account owner&apos;s name. See the README for more information.
+        p Good luck!
+        hr
+        p List of accounts (Click on account to see details):
+        each val in accounts
+            a(href=`/accounts/${val}`)= val
+            br
